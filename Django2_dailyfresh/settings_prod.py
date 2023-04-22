@@ -25,7 +25,7 @@ SECRET_KEY = '^z-^@u7(39cx%nh0utvpv5zsi2u$sr$%u_1a==nbnk1+i80ne6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.31.214']
 
 # Application definition
 
@@ -83,10 +83,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'dailyfresh',
-        'HOST': 'localhost',
+        'HOST': '192.168.31.214',
         'PORT': '3306',
-        'USER': '#',  # 数据库用户名
-        'PASSWORD': '#',  # 数据库密码
+        'USER': 'root',  # 数据库用户名
+        'PASSWORD': '888888',  # 数据库密码
     }
 }
 
@@ -148,8 +148,8 @@ TINYMCE_DEFAULT_CONFIG = {
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.qq.com'
 EMAIL_PORT = 25
-EMAIL_HOST_USER = 'xxxx@qq.com'  # 发送邮件的邮箱
-EMAIL_HOST_PASSWORD = 'xxxx'  # qq邮箱授权码
+EMAIL_HOST_USER = '492443870@qq.com'  # 发送邮件的邮箱
+EMAIL_HOST_PASSWORD = 'qqme33468'  # qq邮箱授权码
 # EMAIL_USE_TLS = True  # 与SMTP服务器通信时，是否启动TLS链接(安全链接)
 EMAIL_FROM = '天天生鲜<XXXXX@qq.com>'  # EMAIL_FROM 和 EMAIL_HOST_USER必须一样
 
@@ -159,7 +159,7 @@ EMAIL_FROM = '天天生鲜<XXXXX@qq.com>'  # EMAIL_FROM 和 EMAIL_HOST_USER必�
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/1",
+        "LOCATION": "redis://192.168.31.214:6379/1",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
@@ -180,7 +180,7 @@ DEFAULT_FILE_STORAGE = 'utils.fdfs.storage.FDFSStorage'
 FDFS_CLIENT_CONF = os.path.join(BASE_DIR, 'utils/fdfs/client_deploy.conf')
 # Set IP:port
 
-FDFS_STORAGE_URL = 'http://ip:port/'  # fdfs服务器的ip和端口，注意端口是nginx的端口
+FDFS_STORAGE_URL = 'http://192.168.31.214:8888/'  # fdfs服务器的ip和端口，注意端口是nginx的端口
 
 # haystack configure
 HAYSTACK_CONNECTIONS = {
